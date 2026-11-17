@@ -1,40 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MasterMut3's Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            text-align: center;
-            background: #0d1117;
-            color: #c9d1d9;
-        }
-        h1 {
-            color: #58a6ff;
-            font-size: 3em;
-        }
-        .box {
-            background: #161b22;
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid #30363d;
-        }
-        .emoji {
-            font-size: 4em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mastermut3 · Portfolio</title>
+  <meta name="description" content="IT administration, cybersecurity, and web projects by mastermut3.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #0b1219;
+      --surface: #131e28;
+      --border: #2a3e4d;
+      --text: #e6edf3;
+      --muted: #8b9eb0;
+      --accent: #3e8fb0;
+    }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 3rem;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+    header h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .bio {
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+    .bio strong { color: var(--text); font-weight: 600; }
+
+    h2 {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+    .link-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .link-card:hover {
+      border-color: var(--accent);
+      transform: translateX(2px);
+    }
+    .link-card .label { font-weight: 600; font-size: 1rem; }
+    .link-card .desc { color: var(--muted); font-size: 0.85rem; }
+    .link-card .arrow { color: var(--accent); font-size: 1.1rem; }
+
+    footer {
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      text-align: center;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      .wrap { padding: 2.5rem 1.2rem 2rem; }
+      header h1 { font-size: 1.5rem; }
+      .avatar { width: 72px; height: 72px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="box">
-        <div class="emoji">🚀</div>
-        <h1>Welcome to My Site!</h1>
-        <p>This is my first website hosted on GitHub Pages.</p>
-        <p>Built with ❤️ in just a few minutes!</p>
+  <div class="wrap">
+    <header>
+      <img src="image.png" alt="Profile" class="avatar" onerror="this.style.display='none'">
+      <div>
+        <h1>mastermut3</h1>
+        <p>IT administration · Cybersecurity · Web</p>
+      </div>
+    </header>
+
+    <p class="bio">
+      Building a structured path through <strong>IT administration and cybersecurity</strong> —
+      networking, Windows and Linux administration, Windows Server, and ethical hacking.
+      I document the journey week by week in an offline progress tracker, and I also run a
+      couple of small web projects on the side.
+    </p>
+
+    <h2>Projects</h2>
+    <div class="links">
+      <a class="link-card" href="https://mastermut3.github.io/10-weak-it-roadmap/">
+        <div>
+          <div class="label">IT Learning Roadmap</div>
+          <div class="desc">10-week tracker · Network+ · Windows Server · LPIC-1 · CEH</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="link-card" href="https://irondesign.ir" target="_blank" rel="noopener">
+        <div>
+          <div class="label">irondesign.ir</div>
+          <div class="desc">Design project</div>
+        </div>
+        <span class="arrow">↗</span>
+      </a>
+      <a class="link-card" href="https://bargcafe.ir" target="_blank" rel="noopener">
+        <div>
+          <div class="label">bargcafe.ir</div>
+          <div class="desc">Café project</div>
+        </div>
+        <span class="arrow">↗</span>
+      </a>
     </div>
+
+    <footer>
+      © <span id="yr"></span> mastermut3 ·
+      <a href="https://github.com/mastermut3" target="_blank" rel="noopener">GitHub</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
